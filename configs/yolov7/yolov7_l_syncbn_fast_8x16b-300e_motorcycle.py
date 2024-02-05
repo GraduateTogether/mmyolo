@@ -42,16 +42,16 @@ num_classes = len(class_name)
 metainfo = dict(classes=class_name, palette=[(20, 220, 60)])
 
 anchors = [
-    [(68, 69), (154, 91), (143, 162)],  # P3/8
-    [(242, 160), (189, 287), (391, 207)],  # P4/16
-    [(353, 337), (539, 341), (443, 432)]  # P5/32
+    [(22, 41), (32, 54), (42, 72)],
+    [(55, 58), (62, 84), (72, 116)],
+    [(100, 115), (113, 154), (154, 143)]
 ]
 
 max_epochs = 40
 train_batch_size_per_gpu = 12
 train_num_workers = 4
 
-load_from = 'https://download.openmmlab.com/mmyolo/v0/yolov7/yolov7_tiny_syncbn_fast_8x16b-300e_coco/yolov7_tiny_syncbn_fast_8x16b-300e_coco_20221126_102719-0ee5bbdf.pth'  # noqa
+load_from = 'https://download.openmmlab.com/mmyolo/v0/yolov7/yolov7_l_syncbn_fast_8x16b-300e_coco/yolov7_l_syncbn_fast_8x16b-300e_coco_20221123_023601-8113c0eb.pth'  # noqa
 
 model = dict(
     backbone=dict(frozen_stages=4),
