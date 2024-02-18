@@ -59,4 +59,4 @@ default_hooks = dict(
     param_scheduler=dict(max_epochs=max_epochs, warmup_mim_iter=10),
     logger=dict(type='LoggerHook', interval=5))
 train_cfg = dict(max_epochs=max_epochs, val_interval=10)
-visualizer = dict(vis_backends = [dict(type='LocalVisBackend'), dict(type='WandbVisBackend')]) # noqa
+visualizer = dict(vis_backends = [dict(type='LocalVisBackend'), dict(type='WandbVisBackend',init_kwargs={"project": "motorcycle_onecategory"})]) # noqa
