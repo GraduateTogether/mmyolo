@@ -1,42 +1,7 @@
 _base_ = './yolov7_l_syncbn_fast_8x16b-300e_coco.py'
 
-data_root = './data/motorcycle/'
-class_name = ('DNoHelmetP1NoHelmet',
-'DHelmetP1Helmet',
-'DHelmet',
-'DNoHelmet',
-'DHelmetP1NoHelmet',
-'DHelmetP0NoHelmetP1NoHelmet',
-'DHelmetP1NoHelmetP2NoHelmet',
-'DNoHelmetP1NoHelmetP2NoHelmet',
-'DHelmetP1NoHelmetP2Helmet',
-'DNoHelmetP1Helmet',
-'DHelmetP0NoHelmetP1NoHelmetP2Helmet',
-'DNoHelmetP0NoHelmetP1NoHelmet',
-'DNoHelmetP0NoHelmet',
-'DHelmetP0NoHelmet',
-'DNoHelmetP1HelmetP2Helmet',
-'DHelmetP1HelmetP2Helmet',
-'DNoHelmetP0NoHelmetP1NoHelmetP2NoHelmet',
-'DHelmetP0NoHelmetP1NoHelmetP2NoHelmet',
-'DHelmetP0NoHelmetP1Helmet',
-'DHelmetP1HelmetP2NoHelmet',
-'DNoHelmetP1NoHelmetP2NoHelmetP3NoHelmet',
-'DHelmetP0Helmet',
-'DNoHelmetP1NoHelmetP2Helmet',
-'DHelmetP0NoHelmetP1HelmetP2Helmet',
-'DHelmetP1NoHelmetP2NoHelmetP3Helmet',
-'DHelmetP0HelmetP1Helmet',
-'DNoHelmetP0NoHelmetP1Helmet',
-'DHelmetP1NoHelmetP2NoHelmetP3NoHelmet',
-'DNoHelmetP0NoHelmetP1NoHelmetP2NoHelmetP3NoHelmet',
-'DHelmetP0HelmetP1NoHelmetP2Helmet',
-'DHelmetP0HelmetP1NoHelmetP2NoHelmet',
-'DNoHelmetP0HelmetP1NoHelmet',
-'DHelmetP0HelmetP1HelmetP2Helmet',
-'DHelmetP0NoHelmetP1NoHelmetP2NoHelmetP3Helmet',
-'DNoHelmetP0NoHelmetP1NoHelmetP2Helmet',
-'DHelmetP0NoHelmetP1NoHelmetP2NoHelmetP3NoHelmet',)
+data_root = './data/motorcycle_one/'
+class_name = ('motorcycle', )
 
 num_classes = len(class_name)
 metainfo = dict(classes=class_name, palette=[(20, 220, 60)])
