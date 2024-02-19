@@ -33,21 +33,21 @@ train_dataloader = dict(
         data_root=data_root,
         metainfo=metainfo,
         ann_file='annotations/train.json',
-        data_prefix=dict(img='images/')))
+        data_prefix=dict(img='images/train/')))
 
 val_dataloader = dict(
     dataset=dict(
         metainfo=metainfo,
         data_root=data_root,
         ann_file='annotations/test.json',
-        data_prefix=dict(img='images/')))
+        data_prefix=dict(img='images/val/')))
 
 test_dataloader = dict(
     dataset=dict(
         metainfo=metainfo,
         data_root=data_root,
         ann_file='annotations/val.json',
-        data_prefix=dict(img='images/')))
+        data_prefix=dict(img='images/test/')))
 
 _base_.optim_wrapper.optimizer.lr = base_lr
 _base_.optim_wrapper.optimizer.batch_size_per_gpu = train_batch_size_per_gpu
