@@ -1,7 +1,7 @@
 _base_ = './yolov7_l_syncbn_fast_8x16b-300e_coco.py'
 
 data_root = './data/motorcycle_one/'
-class_name = ('motorcycle', )
+class_name = ('humanridebike', )
 
 num_classes = len(class_name)
 metainfo = dict(classes=class_name, palette=[(20, 220, 60)])
