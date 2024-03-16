@@ -1,12 +1,13 @@
+# 基於該配置進行繼承並重寫部分配置
 _base_ = './yolov7_l_syncbn_fast_8x16b-300e_coco.py'
 
-data_root = './data/motorcycle_one/'
-class_name = ('humanridebike', )
+data_root = './data/motorcycle_one/'  # 數據集根路徑
+class_name = ('humanridebike', )  # 數據集類別名稱
 
-num_classes = len(class_name)
+num_classes = len(class_name)  # 數據集類別數
 metainfo = dict(classes=class_name, palette=[(20, 220, 60)])
 
-anchors = [
+anchors = [                          # 多尺度的先驗框基本尺寸
     [(22, 41), (32, 54), (42, 72)],
     [(55, 58), (62, 84), (72, 116)],
     [(100, 115), (113, 154), (154, 143)]

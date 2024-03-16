@@ -1,3 +1,4 @@
+# 基於該配置進行繼承並重寫部分配置
 _base_ = ['../_base_/default_runtime.py', '../_base_/det_p5_tta.py']
 
 # ========================Frequently modified parameters======================
